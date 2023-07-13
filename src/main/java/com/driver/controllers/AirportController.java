@@ -130,10 +130,11 @@ public class AirportController {
         //Revenue will also decrease if some passenger cancels the flight
 
 
-        int revenue = airportService.calculateRevenueOfAFlight(flightId);
-        if(revenue == 3050)
-            return 3000;
-        return revenue;
+//        int revenue = airportService.calculateRevenueOfAFlight(flightId);
+//        if(revenue == 3050)
+//            return 3000;
+//        return revenue;
+        return airportService.calculateRevenueOfAFlight(flightId);
     }
 
 

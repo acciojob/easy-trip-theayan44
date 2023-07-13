@@ -159,10 +159,19 @@ public class AirportRepository {
     }
 
     public int calculateRevenueOfAFlight(Integer flightId) {
-        int numberOfPerson = 0;
-        if(flightDB.containsKey(flightId) && flightPassengerDB.containsKey(flightId))
-            numberOfPerson =  flightPassengerDB.get(flightId).size();
-        return numberOfPerson;
+//        int numberOfPerson = 0;
+//        if(flightDB.containsKey(flightId) && flightPassengerDB.containsKey(flightId))
+//            numberOfPerson =  flightPassengerDB.get(flightId).size();
+//        return numberOfPerson;
+        int total_revenue = 0;
+        if(!flightPassengerDB.containsKey(flightId))return total_revenue;
+
+        int total_boooking = flightPassengerDB.get(flightId).size();
+
+        for(int pass = 0 ; pass < total_boooking ; pass++){
+            total_revenue += (3000 + (pass) * 50);
+        }
+        return total_revenue;
     }
 
     public int countOfBookingsDoneByPassengerAllCombined(Integer passengerId) {
