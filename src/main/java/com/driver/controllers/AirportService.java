@@ -53,8 +53,8 @@ public class AirportService {
 
     public int calculateRevenueOfAFlight(Integer flightId) {
         int numberOfPeople = airportRepository.calculateRevenueOfAFlight(flightId);
-        if(numberOfPeople == 0)
-            return 0;
+//        if(numberOfPeople == 0)
+//            return 0;
         return 3000 + (numberOfPeople * 50);
     }
 
