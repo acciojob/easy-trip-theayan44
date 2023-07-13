@@ -146,6 +146,8 @@ public class AirportRepository {
             return "FAILURE";
         if(!flightDB.containsKey(flightId))
             return "FAILURE";
+        if(!flightPassengerDB.containsKey(flightId))
+            return "FAILURE";
         if(flightPassengerDB.containsKey(flightId) && !flightPassengerDB.get(flightId).contains(passengerId))
             return "FAILURE";
 
