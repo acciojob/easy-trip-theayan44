@@ -39,8 +39,8 @@ public class AirportService {
 
     public int calculateFlightFare(Integer flightId) {
         int numberOfPeople = airportRepository.calculateFlightFare(flightId);
-        if(numberOfPeople == 0)
-            return 0;
+//        if(numberOfPeople == 0)
+//            return 0;
         return 3000 + (numberOfPeople * 50);
     }
 
