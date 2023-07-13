@@ -126,7 +126,7 @@ public class AirportRepository {
             return "FAILURE";
         for(int currFlight : flightPassengerDB.keySet()){
             List<Integer> currPassengerList = flightPassengerDB.get(currFlight);
-            if(currPassengerList.contains(passengerId))
+            if(currPassengerList.contains(passengerId) && flightId == currFlight)
                 return "FAILURE";
         }
         if(flightPassengerDB.containsKey(flightId) && flightPassengerDB.get(flightId).size() >= flightDB.get(flightId).getMaxCapacity())
