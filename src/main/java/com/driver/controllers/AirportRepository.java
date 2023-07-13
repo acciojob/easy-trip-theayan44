@@ -151,7 +151,7 @@ public class AirportRepository {
 
         //Now cancel the ticket
         List<Integer> passengerList = flightPassengerDB.get(flightId);
-        passengerList.remove((Integer) passengerId);
+        passengerList.remove(passengerId);
         flightPassengerDB.put(flightId, passengerList);
         return "SUCCESS";
     }
